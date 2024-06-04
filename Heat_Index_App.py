@@ -92,10 +92,10 @@ rel_humidity_std = 7.419842
 # RH_inputs = [61, 61, 62, 62, 63, 81, 90]
 # AT_inputs = [37.7, 35.8, 37.8, 35.7, 34.4, 37, 33.9]  # try other inputs
 # RH_inputs = [33, 44, 37, 44, 52, 41, 56]  # try other inputs
-st.write("### Input Apparent Temperatures (AT)")
+st.write("### Input Temperatures")
 
 with st.form("AT_form"):
-    AT_inputs = [st.number_input(f"{i} day/s ago (AT)", key=f"AT_{i}") for i in range(1, 8)]
+    AT_inputs = [st.number_input(f"{i} day/s ago", key=f"AT_{i}") for i in range(1, 8)]
     at_submit_button = st.form_submit_button(label='Submit')
 
 
